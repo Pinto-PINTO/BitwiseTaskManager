@@ -1,4 +1,4 @@
-package com.example.testproject;
+package com.example.bitwise;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.testproject.Adapter.ToDoAdapter;
-import com.example.testproject.Model.ToDoModel;
+import com.example.bitwise.Adapter.ToDoAdapter;
+import com.example.bitwise.Model.ToDoModel;
 
 import java.util.ArrayList;
 import java.util.List;

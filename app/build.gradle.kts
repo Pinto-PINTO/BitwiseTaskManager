@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.testproject"
+    namespace = "com.example.bitwise"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.testproject"
+        applicationId = "com.example.bitwise"
         minSdk = 34
         targetSdk = 34
         versionCode = 1

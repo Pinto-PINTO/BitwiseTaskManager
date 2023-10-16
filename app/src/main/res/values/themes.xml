@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.TestProject" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.BitWise" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.TestProject" parent="Base.Theme.TestProject" />
+    <style name="Theme.BitWise" parent="Base.Theme.BitWise" />
 </resources>

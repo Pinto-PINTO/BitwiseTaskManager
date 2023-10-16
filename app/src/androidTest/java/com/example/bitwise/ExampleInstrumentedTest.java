@@ -1,4 +1,4 @@
-package com.example.testproject;
+package com.example.bitwise;
 
 import android.content.Context;
 

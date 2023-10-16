@@ -1,4 +1,4 @@
-package com.example.testproject;
+package com.example.bitwise;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;

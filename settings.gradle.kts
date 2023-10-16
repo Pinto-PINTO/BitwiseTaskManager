@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TestProject"
+rootProject.name = "BitWise"
 include(":app")
  

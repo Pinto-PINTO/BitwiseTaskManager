@@ -1,4 +1,4 @@
-package com.example.testproject.Model;
+package com.example.bitwise.Model;
 
 public class ToDoModel {
     private int id, status;

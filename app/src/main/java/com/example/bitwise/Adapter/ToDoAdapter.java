@@ -1,4 +1,4 @@
-package com.example.testproject.Adapter;
+package com.example.bitwise.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,9 +7,9 @@ import android.widget.CheckBox;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.testproject.MainActivity;
-import com.example.testproject.Model.ToDoModel;
-import com.example.testproject.R;
+import com.example.bitwise.MainActivity;
+import com.example.bitwise.Model.ToDoModel;
+import com.example.bitwise.R;
 
 import java.util.List;
 
