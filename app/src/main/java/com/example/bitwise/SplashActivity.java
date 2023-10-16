@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
             actionBar.hide(); // Check for null before invoking methods
         }
 
-        final Intent i = new Intent(SplashActivity.this, MainActivity.class);
+        final Intent i = new Intent(SplashActivity.this, IntroActivity.class);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
