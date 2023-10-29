@@ -1,26 +1,26 @@
 package com.example.bitwise;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
-public class IntroActivity extends AppCompatActivity {
+public class AuthenticationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
+        setContentView(R.layout.activity_authentication);
 
-        AppCompatButton getStartedButton = findViewById(R.id.getStartedBtn);
+        Button doneBtn = findViewById(R.id.doneBtn);
 
-        getStartedButton.setOnClickListener(new View.OnClickListener() {
+        doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create an Intent to start the MainActivity
-                Intent intent = new Intent(IntroActivity.this, AuthenticationActivity.class);
+                Intent intent = new Intent(AuthenticationActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
