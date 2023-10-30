@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "620860267285",
+    "project_id": "bitwise-73ca5",
+    "storage_bucket": "bitwise-73ca5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620860267285:android:859f0e63433096ae4e271c",
+        "android_client_info": {
+          "package_name": "com.example.bitwise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCznmyVXBxDz4fXgz9xSSPDfxHC4L0P9gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
