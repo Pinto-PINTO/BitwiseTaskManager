@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/pagebkg"
+    tools:context=".LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="644dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_edittext"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add New Task"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/task_text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Add New task" />
+
+            <EditText
+                android:id="@+id/add_task"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/add_task_icon"
+                android:drawablePadding="8dp"
+                android:hint="Task"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/task_status_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Select Task Status" />
+            <Spinner
+                android:id="@+id/taskStatusSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:hint="Select Task status"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/task_priority_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Select Task Priority" />
+            <Spinner
+                android:id="@+id/taskPrioritySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:hint="Select Task priority"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/add_task_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/green"
+                android:text="Add Task"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/reset_task_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/green"
+                android:text="Reset"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

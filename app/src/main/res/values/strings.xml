@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">BitWise</string>
+
+    <string-array name="task_status_array">
+        <item>Not Started</item>
+        <item>In Progress</item>
+        <item>Completed</item>
+    </string-array>
+
+    <string-array name="task_priority_array">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+
 </resources>
