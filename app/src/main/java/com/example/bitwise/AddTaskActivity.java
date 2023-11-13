@@ -23,6 +23,7 @@ import java.util.Map;
 public class AddTaskActivity extends AppCompatActivity {
 
     private EditText addTask;
+    private EditText taskTag;
     private Button addTaskButton;
 
     String selectedStatus;
@@ -53,6 +54,7 @@ public class AddTaskActivity extends AppCompatActivity {
         taskPrioritySpinner.setAdapter(priorityAdapter);
 
         addTask = findViewById(R.id.add_task);
+        taskTag = findViewById(R.id.task_tag);
         addTaskButton = findViewById(R.id.add_task_button);
 
         addTaskButton.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +97,7 @@ public class AddTaskActivity extends AppCompatActivity {
     private void insertData(){
         Map<String,Object> map = new HashMap<>();
         map.put("taskName", addTask.getText().toString());
+        map.put("taskTag", taskTag.getText().toString());
         map.put("taskStatus", selectedStatus);
         map.put("taskPriority", selectedPriority);
 
