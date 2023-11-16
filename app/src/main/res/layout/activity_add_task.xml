@@ -8,6 +8,7 @@
     android:gravity="center"
     android:background="@drawable/pagebkg"
     tools:context=".LoginActivity">
+    <include layout="@layout/toolbar"></include>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
