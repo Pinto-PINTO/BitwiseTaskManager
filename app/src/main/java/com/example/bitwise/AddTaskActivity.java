@@ -13,10 +13,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.bitwise.Model.TaskModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -28,6 +31,8 @@ public class AddTaskActivity extends AppCompatActivity {
     private EditText taskTag;
     private Button addTaskButton;
 
+    DatabaseReference databaseUsers;
+
     String selectedStatus;
     String selectedPriority;
 
@@ -38,6 +43,8 @@ public class AddTaskActivity extends AppCompatActivity {
 
         //toolbar back button
         ImageView backButton = findViewById(R.id.toolbar_back_icon);
+        TextView toolbarText = findViewById(R.id.toolbar_text);
+        toolbarText.setText("Add New Task");
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +76,7 @@ public class AddTaskActivity extends AppCompatActivity {
         addTask = findViewById(R.id.add_task);
         taskTag = findViewById(R.id.task_tag);
         addTaskButton = findViewById(R.id.add_task_button);
+        databaseUsers = FirebaseDatabase.getInstance().getReference();
 
         addTaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,14 +116,17 @@ public class AddTaskActivity extends AppCompatActivity {
     }
 
     private void insertData(){
-        Map<String,Object> map = new HashMap<>();
-        map.put("taskName", addTask.getText().toString());
-        map.put("taskTag", taskTag.getText().toString());
-        map.put("taskStatus", selectedStatus);
-        map.put("taskPriority", selectedPriority);
 
-        FirebaseDatabase.getInstance().getReference().child("tasks").push()
-                .setValue(map)
+        String taskId = databaseUsers.push().getKey();
+        String taskName =  addTask.getText().toString();
+        String taskTagName = taskTag.getText().toString();
+        String taskStatus = selectedStatus;
+        String taskPriority = selectedPriority;
+
+        TaskModel taskModel = new TaskModel(taskName,taskPriority,taskStatus,taskTagName);
+
+        databaseUsers.child("tasks").push()
+                .setValue(taskModel)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {

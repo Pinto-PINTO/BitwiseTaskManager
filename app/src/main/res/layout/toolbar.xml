@@ -24,16 +24,9 @@
             android:textColor="@android:color/white"
             android:layout_centerVertical="true"
             android:textSize="20sp"
-            android:text="My Task">
+            android:text=""
+            >
         </TextView>
-
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/baseline_menu_24">-->
-
-<!--        </ImageView>-->
-
 
     </RelativeLayout>
 
