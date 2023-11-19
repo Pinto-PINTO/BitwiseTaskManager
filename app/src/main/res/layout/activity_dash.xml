@@ -198,7 +198,7 @@
                                 android:background="@drawable/bkg_oval_2">
 
                                 <ImageView
-                                    android:id="@+id/imageView5"
+                                    android:id="@+id/imageView523"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:src="@drawable/favorites"
@@ -260,15 +260,33 @@
                     </LinearLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tasksRecyclerView"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:nestedScrollingEnabled="true"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:clipToPadding="false"
                         android:paddingStart="24dp"
                         android:paddingEnd="24dp"
                         android:layout_weight="1" />
+
+
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
+
         </LinearLayout>
     </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_add"
+        android:backgroundTint="@android:color/holo_green_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
