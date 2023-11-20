@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //toolbar
-        TextView toolbarText = findViewById(R.id.toolbar_text);
-        ImageView toolbarBackIcon = findViewById(R.id.toolbar_back_icon);
-        toolbarText.setText("Task List");
-        toolbarBackIcon.setVisibility(View.INVISIBLE);
+//        TextView toolbarText = findViewById(R.id.toolbar_text);
+//        ImageView toolbarBackIcon = findViewById(R.id.toolbar_back_icon);
+//        toolbarText.setText("Task List");
+//        toolbarBackIcon.setVisibility(View.INVISIBLE);
 
         recyclerView =  findViewById(R.id.tasksRecyclerView);
         databaseReference = FirebaseDatabase.getInstance().getReference("tasks");
