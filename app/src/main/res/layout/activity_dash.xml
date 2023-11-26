@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   >
+    tools:context=".Dash">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                                 android:id="@+id/textView6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Completed"
+                                android:text="Favourites"
                                 android:textAlignment="center"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -172,7 +172,7 @@
                                 android:id="@+id/textView61"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="In Progress"
+                                android:text="Messages"
                                 android:textAlignment="center"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -212,7 +212,7 @@
                                 android:id="@+id/textView612"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Not Started"
+                                android:text="Favourites"
                                 android:textAlignment="center"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -274,10 +274,13 @@
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
+
         </LinearLayout>
     </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingactionbutton"
+        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
