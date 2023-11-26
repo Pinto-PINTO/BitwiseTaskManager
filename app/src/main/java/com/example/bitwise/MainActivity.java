@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    String itemKey = snapshot.getKey();
                     TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
+                    taskModel.setTaskkey(itemKey);
                     list.add(taskModel);
                 }
                 taskAdapter.notifyDataSetChanged();

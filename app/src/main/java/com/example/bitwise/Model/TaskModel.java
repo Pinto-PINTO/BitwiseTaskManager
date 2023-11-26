@@ -7,6 +7,8 @@ public class TaskModel {
     String taskStatus;
     String taskTag;
 
+    String taskkey;
+
     public TaskModel() {
     }
 
@@ -47,5 +49,13 @@ public class TaskModel {
 
     public void setTaskTag(String taskTag) {
         this.taskTag = taskTag;
+    }
+
+    public String getKey() {
+        return taskkey;
+    }
+
+    public void setTaskkey(String taskKey) {
+        this.taskkey = taskKey;
     }
 }
