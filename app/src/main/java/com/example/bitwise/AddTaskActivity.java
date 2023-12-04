@@ -95,7 +95,7 @@ public class AddTaskActivity extends AppCompatActivity {
             }
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
-                // Do nothing when nothing is selected
+
             }
         });
 

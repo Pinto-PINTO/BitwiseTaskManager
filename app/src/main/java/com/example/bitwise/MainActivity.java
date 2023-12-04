@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -52,11 +53,14 @@ public class MainActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    String itemKey = snapshot.getKey();
+                    String itemKey = dataSnapshot.getKey();
                     TaskModel taskModel = dataSnapshot.getValue(TaskModel.class);
                     taskModel.setTaskkey(itemKey);
                     list.add(taskModel);
+
                 }
                 taskAdapter.notifyDataSetChanged();
             }
@@ -76,3 +80,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+

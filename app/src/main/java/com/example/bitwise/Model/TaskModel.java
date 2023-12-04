@@ -9,6 +9,8 @@ public class TaskModel {
 
     String taskkey;
 
+    private boolean isChecked;
+
     public TaskModel() {
     }
 
@@ -57,5 +59,17 @@ public class TaskModel {
 
     public void setTaskkey(String taskKey) {
         this.taskkey = taskKey;
+    }
+
+
+
+    // Constructor, getters, setters for existing fields...
+
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public void setChecked(boolean checked) {
+        isChecked = checked;
     }
 }

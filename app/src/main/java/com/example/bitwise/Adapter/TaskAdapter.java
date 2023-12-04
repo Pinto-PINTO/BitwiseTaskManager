@@ -1,6 +1,8 @@
 package com.example.bitwise.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,8 @@ import android.widget.CheckBox;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bitwise.AddTaskActivity;
+import com.example.bitwise.MainActivity;
 import com.example.bitwise.Model.TaskModel;
 import com.example.bitwise.R;
 import com.google.firebase.database.DatabaseReference;
@@ -48,29 +52,45 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
 
         holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                String itemKey = taskModel.getKey(); // Assuming TaskModel has a getKey() method
+                String itemKey = taskModel.getKey();
+                Log.d("itemkey", itemKey);
 
                 // Delete the item from Firebase using its key
                 deleteItemFromFirebase(itemKey, position);
+
+                if (context != null) {
+                    Intent intent = new Intent(context, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+
+
+
             }
         });
 
 
     }
 
-    private void deleteItemFromFirebase(String itemKey, int position) {
-        databaseReference.child(itemKey).removeValue()
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        // Deletion successful
-                        list.remove(position);
-                        notifyItemRemoved(position);
-                    } else {
-                        // Deletion failed
-                        // Handle the error
-                    }
-                });
-    }
+
+private void deleteItemFromFirebase(String itemKey, int position) {
+    databaseReference.child(itemKey).removeValue()
+            .addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    // Deletion successful
+                    list.remove(position); // Remove item from the list
+                    notifyItemRemoved(position); // Notify adapter about the removal
+
+                    // Notify adapter about the changes in the dataset
+                    notifyItemRangeChanged(position, list.size());
+
+
+                } else {
+                    // Deletion failed
+                    // Handle the error
+                }
+            });
+}
 
     @Override
     public int getItemCount() {
